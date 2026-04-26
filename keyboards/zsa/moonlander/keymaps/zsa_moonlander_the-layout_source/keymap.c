@@ -54,11 +54,12 @@ void matrix_init_user(void) {
 bool process_record_user(uint16_t keycode, keyrecord_t *record) {
   switch (keycode) {
 
+    case KC_1 ... KC_9:
     case KC_0:
       if (record->event.pressed && (get_mods() & MOD_MASK_SHIFT)) {
         uint8_t saved = get_mods();
         del_mods(MOD_MASK_SHIFT);
-        tap_code(KC_0);
+        tap_code(keycode);
         set_mods(saved);
         return false;
       }
