@@ -17,7 +17,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     // row 0 — empty
     KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO,                                               KC_NO, KC_NO, KC_NO, KC_NO,        KC_NO,        KC_NO,        KC_NO,
     // row 1 — app launchers left: teams teleg term | right: brwsr notes settings
-    KC_NO, HYPR(KC_T), HYPR(KC_G), HYPR(KC_I), KC_NO, KC_NO, KC_NO,                               KC_NO, KC_NO, KC_NO, HYPR(KC_B),   HYPR(KC_N),   HYPR(KC_S),   KC_NO,
+    KC_NO, KC_NO, HYPR(KC_T), HYPR(KC_G), HYPR(KC_I), KC_NO, KC_NO,                               KC_NO, KC_NO, HYPR(KC_B),   HYPR(KC_N),   HYPR(KC_S),   KC_NO,        KC_NO,
     // row 2 — window nav left: mctl-up lwind close open rwind | right: ltab otab ctab rtab mctl-dn
     KC_NO, LCTL(KC_UP), HYPR(KC_LEFT), LGUI(KC_W), LGUI(KC_N), HYPR(KC_RIGHT), KC_NO,                             KC_NO, LSFT(LGUI(KC_LBRC)), LGUI(KC_T), LGUI(KC_W), LSFT(LGUI(KC_RBRC)), LCTL(KC_DOWN), KC_NO,
     // row 3 — left: spread resize-l resize-t resize-b resize-r | right: move-l move-b move-t move-r unite
