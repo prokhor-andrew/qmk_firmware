@@ -14,12 +14,18 @@ enum custom_keycodes {
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   [0] = LAYOUT_moonlander(
-    KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT,                                 KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT,
-    KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT,                                 KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT,
-    KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT,                                                                 KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT,
-    KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT,                                 KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT,
-    KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT,                                                                                                 KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT,
-    KC_NO,          KC_TRANSPARENT, KC_TRANSPARENT,                 KC_TRANSPARENT, KC_TRANSPARENT, TO(1)
+    // row 0 — empty
+    KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO,                                               KC_NO, KC_NO, KC_NO, KC_NO,        KC_NO,        KC_NO,        KC_NO,
+    // row 1 — app launchers left: teams teleg term | right: brwsr notes settings
+    KC_NO, HYPR(KC_T), HYPR(KC_G), HYPR(KC_I), KC_NO, KC_NO, KC_NO,                               KC_NO, KC_NO, KC_NO, HYPR(KC_B),   HYPR(KC_N),   HYPR(KC_S),   KC_NO,
+    // row 2 — window nav left: mctl-up lwind close open rwind | right: ltab otab ctab rtab mctl-dn
+    KC_NO, LCTL(KC_UP), HYPR(KC_LEFT), LGUI(KC_W), LGUI(KC_N), HYPR(KC_RIGHT), KC_NO,                             KC_NO, LSFT(LGUI(KC_LBRC)), LGUI(KC_T), LGUI(KC_W), LSFT(LGUI(KC_RBRC)), LCTL(KC_DOWN), KC_NO,
+    // row 3 — left: spread resize-l resize-t resize-b resize-r | right: move-l move-b move-t move-r unite
+    KC_NO, HYPR(KC_O), HYPR(KC_H), HYPR(KC_K), HYPR(KC_J), HYPR(KC_L),                            KC_NO, HYPR(KC_A), HYPR(KC_Z), HYPR(KC_W), HYPR(KC_D), HYPR(KC_P),
+    // row 4 — left: search hide | right: show-win jmp-search
+    KC_NO, KC_NO, KC_NO, LGUI(KC_SPC), LGUI(KC_H), KC_NO,                                                         KC_NO, HYPR(KC_V), LGUI(KC_G), KC_NO, KC_NO, KC_NO,
+    // thumbs
+    KC_NO, KC_NO, KC_NO,                                                                            KC_NO, KC_NO, TO(1)
   ),
   [1] = LAYOUT_moonlander(
     KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT,                                 KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT,
