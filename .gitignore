@@ -125,8 +125,11 @@ via*.json
 /keyboards/**
 !/keyboards/zsa/
 !/keyboards/zsa/**
+/keyboards/zsa/**/.DS_Store
 /keyboards/zsa/**/keymaps/**
 !/keyboards/zsa/**/keymaps/default
 !/keyboards/zsa/**/keymaps/default/**
 !/keyboards/zsa/**/keymaps/oryx
 !/keyboards/zsa/**/keymaps/oryx/**
+!/keyboards/zsa/**/keymaps/zsa_moonlander_the-layout_source
+!/keyboards/zsa/**/keymaps/zsa_moonlander_the-layout_source/**
