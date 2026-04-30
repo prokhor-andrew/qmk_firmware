@@ -4,6 +4,7 @@
 #undef TAPPING_TERM
 #define TAPPING_TERM 204
 
+
 #define COMBO_TERM 49
 
 #define USB_SUSPEND_WAKEUP_DELAY 0

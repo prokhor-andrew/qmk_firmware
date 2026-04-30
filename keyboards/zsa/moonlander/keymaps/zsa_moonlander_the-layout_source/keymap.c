@@ -134,6 +134,16 @@ void matrix_init_user(void) {
     oneshot_enable();
 }
 
+bool get_hold_on_other_key_press(uint16_t keycode, keyrecord_t *record) {
+    switch (keycode) {
+        case LT(2, KC_ESCAPE):
+        case LT(2, KC_TAB):
+            return true;
+        default:
+            return false;
+    }
+}
+
 bool process_record_user(uint16_t keycode, keyrecord_t *record) {
   switch (keycode) {
     case KC_1 ... KC_0:
