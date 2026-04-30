@@ -21,8 +21,8 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     KC_NO, KC_NO,      KC_NO,      KC_NO,      KC_NO,      KC_NO,                       KC_NO, KC_NO,      KC_NO,      KC_NO,      KC_NO,      KC_NO,
     // row 4
     KC_NO, KC_NO,      KC_NO,      KC_NO,          KC_NO,      HYPR(KC_P),             HYPR(KC_MINS), KC_NO, KC_NO,  KC_NO,      KC_NO,      KC_NO,
-    // thumbs: Ctrl=TO(8)  Nav=TO(0)  _    _  Mouse=TO(9)  Text=TO(1)
-    TO(8), TO(0), KC_NO,                                                                KC_NO, TO(9), TO(1)
+    // thumbs: Nav=TO(0)  Ctrl=TO(8)  _    _  Mouse=TO(9)  Text=TO(1)
+    TO(0), TO(8), KC_NO,                                                                KC_NO, TO(9), TO(1)
   ),
 
   [1] = LAYOUT_moonlander(
