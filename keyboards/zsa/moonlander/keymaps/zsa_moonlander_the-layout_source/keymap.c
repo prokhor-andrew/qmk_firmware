@@ -21,8 +21,8 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     KC_NO, KC_NO,      KC_NO,      KC_NO,      KC_NO,      KC_NO,                       KC_NO, KC_NO,      KC_NO,      KC_NO,      KC_NO,      KC_NO,
     // row 4
     KC_NO, KC_NO,      KC_NO,      KC_NO,          KC_NO,      HYPR(KC_P),             HYPR(KC_MINS), KC_NO, KC_NO,  KC_NO,      KC_NO,      KC_NO,
-    // thumbs: Ctrl=MO(8)  _  _    _  Mouse=MO(9)  Type=TO(1)
-    MO(8), KC_NO, KC_NO,                                                                KC_NO, MO(9), TO(1)
+    // thumbs: Ctrl=TG(8)  _  _    _  Mouse=TG(9)  Type=TO(1)
+    TG(8), KC_NO, KC_NO,                                                                KC_NO, TG(9), TO(1)
   ),
 
   [1] = LAYOUT_moonlander(
@@ -31,7 +31,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     LT(2, KC_ESCAPE),KC_A,          KC_S,           KC_D,           KC_F,           KC_G,           KC_GRAVE,                                                                       KC_QUOTE,       KC_H,           KC_J,           KC_K,           KC_L,           KC_SCLN,        LT(2, KC_TAB),
     OSM(MOD_LSFT),  KC_Z,           KC_X,           KC_C,           KC_V,           KC_B,                                           KC_N,           KC_M,           KC_COMMA,       KC_DOT,         KC_SLASH,       OSM(MOD_RSFT),
     KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_BSPC,        KC_SPACE,       KC_TRANSPARENT,                                                                                                 KC_TRANSPARENT, KC_ENTER,       OSM(MOD_RGUI),  KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT,
-    MO(8),          TO(0),          KC_TRANSPARENT,                 KC_TRANSPARENT, KC_TRANSPARENT, KC_NO
+    TG(8),          TO(0),          KC_TRANSPARENT,                 KC_TRANSPARENT, KC_TRANSPARENT, KC_NO
   ),
 
   [2] = LAYOUT_moonlander(
