@@ -21,8 +21,8 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     KC_NO, KC_NO,      KC_NO,      KC_NO,      KC_NO,      KC_NO,                       KC_NO, KC_NO,      KC_NO,      KC_NO,      KC_NO,      KC_NO,
     // row 4
     KC_NO, KC_NO,      KC_NO,      KC_NO,          KC_NO,      HYPR(KC_P),             HYPR(KC_MINS), KC_NO, KC_NO,  KC_NO,      KC_NO,      KC_NO,
-    // thumbs: Ctrl=TG(8)  _  _    _  Mouse=TG(9)  Type=TO(1)
-    TG(8), KC_NO, KC_NO,                                                                KC_NO, TG(9), TO(1)
+    // thumbs: Ctrl=TO(8)  _  _    _  Mouse=TO(9)  Type=TO(1)
+    TO(8), KC_NO, KC_NO,                                                                KC_NO, TO(9), TO(1)
   ),
 
   [1] = LAYOUT_moonlander(
@@ -31,7 +31,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     LT(2, KC_ESCAPE),KC_A,          KC_S,           KC_D,           KC_F,           KC_G,           KC_GRAVE,                                                                       KC_QUOTE,       KC_H,           KC_J,           KC_K,           KC_L,           KC_SCLN,        LT(2, KC_TAB),
     OSM(MOD_LSFT),  KC_Z,           KC_X,           KC_C,           KC_V,           KC_B,                                           KC_N,           KC_M,           KC_COMMA,       KC_DOT,         KC_SLASH,       OSM(MOD_RSFT),
     KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_BSPC,        KC_SPACE,       KC_TRANSPARENT,                                                                                                 KC_TRANSPARENT, KC_ENTER,       OSM(MOD_RGUI),  KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT,
-    TG(8),          TO(0),          KC_TRANSPARENT,                 KC_TRANSPARENT, KC_TRANSPARENT, KC_NO
+    TO(8),          TO(0),          KC_TRANSPARENT,                 KC_TRANSPARENT, KC_TRANSPARENT, KC_NO
   ),
 
   [2] = LAYOUT_moonlander(
@@ -97,7 +97,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT,    KC_TRANSPARENT, KC_VOLD,        KC_BRID,        KC_BRIU,        KC_VOLU,        KC_TRANSPARENT, KC_TRANSPARENT,
     KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT,                    KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT,
     KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT,                    KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT,
-    KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT,                                                                    KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT
+    TO(0),          KC_TRANSPARENT, KC_TRANSPARENT,                                                                    KC_TRANSPARENT, KC_TRANSPARENT, TO(1)
   ),
 
   [9] = LAYOUT_moonlander( // Mouse: H=←  J=↓  K=↑  L=→  Space-pos=LClick  Enter-pos=RClick
@@ -106,7 +106,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT,    KC_TRANSPARENT, KC_MS_LEFT,     KC_MS_DOWN,     KC_MS_UP,       KC_MS_RIGHT,    KC_TRANSPARENT, KC_TRANSPARENT,
     KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT,                    KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT,
     KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_BTN1,        KC_TRANSPARENT,                    KC_TRANSPARENT, KC_BTN2,        KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT,
-    KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT,                                                                    KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT
+    TO(0),          KC_TRANSPARENT, KC_TRANSPARENT,                                                                    KC_TRANSPARENT, KC_TRANSPARENT, TO(1)
   ),
 };
 
