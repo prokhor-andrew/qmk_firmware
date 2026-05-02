@@ -13,7 +13,7 @@
 
 ```
 LEFT                                          RIGHT
- —     —      —     ⌘L      —      —      —    —     —      —     ⌘R      —      —      —
+ —     —      —     ⌘L    BRID   BRIU    —   MUTE  VOLD   VOLU   ⌘R      —      —      —
 ^OSM   Q      W      E      R      T     [     ]     Y      U      I      O      P    ⌥OSM
 ESC    A      S      D      F      G     `     '     H      J      K      L      ;   HYPR
 ⇧OSM   Z      X      C      V      B           N     M      ,      .      /    ⇧OSM
