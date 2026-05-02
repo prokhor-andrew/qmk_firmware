@@ -17,7 +17,7 @@ LEFT                                          RIGHT
 ^OSM   Q      W      E      R      T     [     ]     Y      U      I      O      P    ⌥OSM
 ESC    A      S      D      F      G     `     '     H      J      K      L      ;   HYPR
 ⇧OSM   Z      X      C      V      B           N     M      ,      .      /    ⇧OSM
- —     —      —     BSP   SPC     —           —    ENT    TAB     —      —      —
+ —     —      —     BSP   SPC     —           —    ENT    TAB    MEH     —      —
 OSL(1)  —      —                         —      —    OSL(1)
 ```
 
@@ -37,7 +37,7 @@ LEFT                                          RIGHT
 ^OSM   0      1      2      3      4      —    —     =      {      }      \      $    ⌥OSM
 ESC    5      6      7      8      9      —    —     -      (      )      ^      %   HYPR
 ⇧OSM   #      &      +      *      !           _     [      ]      |      @    ⇧OSM
- —     —      —     BSP   SPC     —           —    ENT    TAB     —      —      —
+ —     —      —     BSP   SPC     —           —    ENT    TAB    MEH     —      —
 ```
 
 > **Note:** Shift+number on left produces the bare number (not the shifted symbol) — handled in `process_record_user`.
