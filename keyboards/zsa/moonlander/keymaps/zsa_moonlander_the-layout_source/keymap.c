@@ -7,15 +7,13 @@
 
 enum custom_keycodes {
   RGB_SLD = ZSA_SAFE_RANGE,
-  MY_GRAVE,
-  MY_QUOTE,
 };
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   [0] = LAYOUT_moonlander(
     MO(2),          KC_TRANSPARENT, OSM(MOD_LALT), LCTL(KC_A),  KC_TRANSPARENT,  KC_TRANSPARENT, KC_TRANSPARENT,                                 KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT,  OSM(MOD_LGUI),  OSM(MOD_RALT),  KC_TRANSPARENT, KC_TRANSPARENT,
     OSM(MOD_LCTL),  KC_Q,           KC_W,           KC_E,           KC_R,           KC_T,           KC_TRANSPARENT,                                 KC_TRANSPARENT, KC_Y,           KC_U,           KC_I,           KC_O,           KC_P,           OSM(MOD_RCTL),
-    KC_ESCAPE,      KC_A,           KC_S,           KC_D,           KC_F,           KC_G,           MY_GRAVE,                                                                       MY_QUOTE,       KC_H,           KC_J,           KC_K,           KC_L,           KC_SCLN,        OSM(MOD_HYPR),
+    KC_ESCAPE,      KC_A,           KC_S,           KC_D,           KC_F,           KC_G,           KC_GRAVE,                                                                       KC_QUOT,        KC_H,           KC_J,           KC_K,           KC_L,           KC_SCLN,        OSM(MOD_HYPR),
     OSM(MOD_LSFT),  KC_Z,           KC_X,           KC_C,           KC_V,           KC_B,                                           KC_N,           KC_M,           KC_COMMA,       KC_DOT,         KC_SLASH,       OSM(MOD_RSFT),
     KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_BSPC,        KC_SPACE,       LGUI(LSFT(KC_3)),                                                                                               LGUI(KC_SPACE), KC_ENTER,       KC_TAB,         KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT,
     OSL(1),         KC_NO,          KC_TRANSPARENT,                 KC_TRANSPARENT, KC_NO,          OSL(1)
@@ -48,44 +46,6 @@ void matrix_init_user(void) {
 
 bool process_record_user(uint16_t keycode, keyrecord_t *record) {
   switch (keycode) {
-    case MY_GRAVE:
-      if (record->event.pressed) {
-        uint8_t mods = get_mods() | get_oneshot_mods();
-        if (mods & MOD_MASK_SHIFT) {
-          uint8_t saved = get_mods();
-          del_mods(MOD_MASK_SHIFT);
-          clear_oneshot_mods();
-          register_mods(MOD_LCTL | MOD_LALT);
-          tap_code(KC_F14);  // Ctrl+Alt+F14 → tilde
-          unregister_mods(MOD_LCTL | MOD_LALT);
-          set_mods(saved);
-        } else {
-          register_mods(MOD_LCTL | MOD_LALT);
-          tap_code(KC_F13);  // Ctrl+Alt+F13 → backtick
-          unregister_mods(MOD_LCTL | MOD_LALT);
-        }
-      }
-      return false;
-
-    case MY_QUOTE:
-      if (record->event.pressed) {
-        uint8_t mods = get_mods() | get_oneshot_mods();
-        if (mods & MOD_MASK_SHIFT) {
-          uint8_t saved = get_mods();
-          del_mods(MOD_MASK_SHIFT);
-          clear_oneshot_mods();
-          register_mods(MOD_LCTL | MOD_LALT);
-          tap_code(KC_F16);  // Ctrl+Alt+F16 → double-quote
-          unregister_mods(MOD_LCTL | MOD_LALT);
-          set_mods(saved);
-        } else {
-          register_mods(MOD_LCTL | MOD_LALT);
-          tap_code(KC_F15);  // Ctrl+Alt+F15 → apostrophe
-          unregister_mods(MOD_LCTL | MOD_LALT);
-        }
-      }
-      return false;
-
     case KC_1 ... KC_0:
       if (record->event.pressed && (get_mods() & MOD_MASK_SHIFT)) {
         uint8_t saved = get_mods();
