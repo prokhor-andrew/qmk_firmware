@@ -8,9 +8,9 @@
 enum custom_keycodes {
   RGB_SLD = ZSA_SAFE_RANGE,
   OS_GUI,
+  OS_CTSF,
+  OS_CSA,
 };
-
-#define CSA_DOT LALT(LCTL(LSFT(KC_DOT)))
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   [0] = LAYOUT_moonlander(
@@ -43,8 +43,8 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   [3] = LAYOUT_moonlander(
     KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT,                                 KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT,
     KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT,                                 KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT,
-    KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, CSA_DOT,        OSM(MOD_LCTL | MOD_LSFT), OSM(MOD_LGUI), KC_TRANSPARENT,                                                     KC_TRANSPARENT, OSM(MOD_LGUI), OSM(MOD_LCTL | MOD_LSFT), CSA_DOT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT,
-    KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT,                                                 KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT,
+    KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, OS_CSA,         OS_CTSF,        OS_GUI,        KC_TRANSPARENT,                                                     KC_TRANSPARENT, OS_GUI,        OS_CTSF,        OS_CSA,         KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT,
+    KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_Z,                                                          KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT,
     KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT,                                                                                                 KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT,
     KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT,                 KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT
   ),
@@ -61,6 +61,18 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
     case OS_GUI:
       if (record->event.pressed) {
         set_oneshot_mods(MOD_LGUI);
+      }
+      return false;
+
+    case OS_CTSF:
+      if (record->event.pressed) {
+        set_oneshot_mods(MOD_LCTL | MOD_LSFT);
+      }
+      return false;
+
+    case OS_CSA:
+      if (record->event.pressed) {
+        set_oneshot_mods(MOD_LCTL | MOD_LALT | MOD_LSFT);
       }
       return false;
 
