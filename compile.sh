@@ -3,7 +3,7 @@
 set -euo pipefail
 
 ZSA_FORK="https://github.com/zsa/qmk_firmware.git"
-QMK_HOME="${QMK_HOME:-$HOME/Projects/firmware}"
+QMK_HOME="${QMK_HOME:-$HOME/Projects/firmware/qmk_firmware}"
 
 if [[ ! -d "$QMK_HOME" ]]; then
   echo "Cloning ZSA QMK fork to $QMK_HOME ..."
