@@ -32,7 +32,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
   [2] = LAYOUT_moonlander(
     KC_NO,          KC_NO,          KC_NO,          KC_NO,          KC_BRIU,        KC_BRID,        KC_NO,                                          KC_MUTE,        KC_VOLD,        KC_VOLU,        KC_NO,          KC_NO,          KC_NO,          LGUI(LCTL(KC_Q)),
-    KC_NO,          KC_NO,          KC_NO,          KC_NO,          KC_NO,          HYPR(KC_T),     KC_NO,                                          KC_NO,          KC_NO,          KC_NO,          KC_NO,          HYPR(KC_O),     KC_NO,          KC_NO,
+    KC_NO,          KC_NO,          KC_NO,          OS_CSA,         OS_CTSF,        HYPR(KC_T),     KC_NO,                                          KC_NO,          KC_NO,          KC_NO,          KC_NO,          HYPR(KC_O),     KC_NO,          KC_NO,
     KC_NO,          HYPR(KC_A),     HYPR(KC_S),     HYPR(KC_D),     HYPR(KC_F),     KC_NO,          KC_NO,                                                                          KC_NO,          KC_LEFT,        KC_DOWN,        KC_UP,          KC_RGHT,        KC_NO,          KC_NO,
     KC_NO,          KC_NO,          KC_NO,          KC_NO,          KC_NO,          KC_NO,                                          KC_NO,          KC_NO,          KC_NO,          KC_NO,          KC_NO,          KC_NO,
     KC_NO,          KC_NO,          KC_NO,          KC_NO,          KC_NO,          KC_NO,                                                                                                         KC_NO,          KC_GRAVE,       S(KC_GRAVE),    KC_NO,          KC_NO,          KC_NO,
