@@ -18,7 +18,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     OSM(MOD_LSFT),  KC_Q,           KC_W,           KC_E,           KC_R,           KC_T,           KC_TRANSPARENT,                                 KC_TRANSPARENT, KC_Y,           KC_U,           KC_I,           KC_O,           KC_P,           OSM(MOD_RSFT),
     KC_NO,          KC_A,           KC_S,           KC_D,           KC_F,           KC_G,           KC_TRANSPARENT,                                                                 KC_TRANSPARENT, KC_H,           KC_J,           KC_K,           KC_L,           KC_SCLN,        KC_NO,
     KC_NO,          KC_Z,           KC_X,           KC_C,           KC_V,           KC_B,                                           KC_N,           KC_M,           KC_COMMA,       KC_DOT,         KC_SLASH,       KC_NO,
-    KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_NO,          KC_SPACE,       CW_TOGG,                                                                                               LGUI(KC_SPACE), KC_ENTER,       KC_TAB,         KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT,
+    KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_NO,          KC_SPACE,       CW_TOGG,                                                                                               LGUI(KC_SPACE), KC_ENTER,       KC_NO,          KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT,
     OSL(2),         OSL(3),         OSM(MOD_MEH),                   OSM(MOD_HYPR),  OSM(MOD_RGUI), KC_ESC
   ),
 
@@ -27,7 +27,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     OSM(MOD_LSFT),  KC_Q,           KC_W,           KC_F,           KC_P,           KC_B,           KC_TRANSPARENT,                                 KC_TRANSPARENT, KC_J,           KC_L,           KC_U,           KC_Y,           KC_SCLN,        OSM(MOD_RSFT),
     KC_NO,          KC_A,           KC_R,           KC_S,           KC_T,           KC_G,           KC_TRANSPARENT,                                                                 KC_TRANSPARENT, KC_M,           KC_N,           KC_E,           KC_I,           KC_O,           KC_NO,
     KC_NO,          KC_Z,           KC_X,           KC_C,           KC_D,           KC_V,                                           KC_K,           KC_H,           KC_COMMA,       KC_DOT,         KC_SLASH,       KC_NO,
-    KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_NO,          KC_SPACE,       CW_TOGG,                                                                                               LGUI(KC_SPACE), KC_ENTER,       KC_TAB,         KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT,
+    KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_NO,          KC_SPACE,       CW_TOGG,                                                                                               LGUI(KC_SPACE), KC_ENTER,       KC_NO,          KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT,
     OSL(2),         OSL(3),         OSM(MOD_MEH),                   OSM(MOD_HYPR),  OSM(MOD_RGUI), KC_ESC
   ),
 
