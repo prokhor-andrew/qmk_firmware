@@ -15,7 +15,7 @@ enum custom_keycodes {
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   [0] = LAYOUT_moonlander(
     KC_NO,          KC_TAB,         OSM(MOD_LCTL), OSM(MOD_LSFT), KC_BSPC,         OSM(MOD_LALT),  KC_TRANSPARENT,                                 KC_TRANSPARENT, OSM(MOD_RALT),  KC_BSPC,         OSM(MOD_RSFT), OSM(MOD_RCTL),  KC_TAB,         KC_TRANSPARENT,
-    OSM(MOD_LCTL),  KC_Q,           KC_W,           KC_E,           KC_R,           KC_T,           KC_TRANSPARENT,                                 KC_TRANSPARENT, KC_Y,           KC_U,           KC_I,           KC_O,           KC_P,           OSM(MOD_RCTL),
+    KC_NO,          KC_Q,           KC_W,           KC_E,           KC_R,           KC_T,           KC_TRANSPARENT,                                 KC_TRANSPARENT, KC_Y,           KC_U,           KC_I,           KC_O,           KC_P,           KC_NO,
     KC_NO,          KC_A,           KC_S,           KC_D,           KC_F,           KC_G,           KC_TRANSPARENT,                                                                 KC_TRANSPARENT, KC_H,           KC_J,           KC_K,           KC_L,           KC_SCLN,        KC_NO,
     KC_NO,          KC_Z,           KC_X,           KC_C,           KC_V,           KC_B,                                           KC_N,           KC_M,           KC_COMMA,       KC_DOT,         KC_SLASH,       KC_NO,
     KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_NO,          KC_SPACE,       CW_TOGG,                                                                                               LGUI(KC_SPACE), KC_ENTER,       KC_NO,          KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT,
@@ -24,7 +24,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
   [1] = LAYOUT_moonlander(
     KC_NO,          KC_TAB,         OSM(MOD_LCTL), OSM(MOD_LSFT), KC_BSPC,         OSM(MOD_LALT),  KC_TRANSPARENT,                                 KC_TRANSPARENT, OSM(MOD_RALT),  KC_BSPC,         OSM(MOD_RSFT), OSM(MOD_RCTL),  KC_TAB,         KC_TRANSPARENT,
-    OSM(MOD_LCTL),  KC_Q,           KC_W,           KC_F,           KC_P,           KC_B,           KC_TRANSPARENT,                                 KC_TRANSPARENT, KC_J,           KC_L,           KC_U,           KC_Y,           KC_SCLN,        OSM(MOD_RCTL),
+    KC_NO,          KC_Q,           KC_W,           KC_F,           KC_P,           KC_B,           KC_TRANSPARENT,                                 KC_TRANSPARENT, KC_J,           KC_L,           KC_U,           KC_Y,           KC_SCLN,        KC_NO,
     KC_NO,          KC_A,           KC_R,           KC_S,           KC_T,           KC_G,           KC_TRANSPARENT,                                                                 KC_TRANSPARENT, KC_M,           KC_N,           KC_E,           KC_I,           KC_O,           KC_NO,
     KC_NO,          KC_Z,           KC_X,           KC_C,           KC_D,           KC_V,                                           KC_K,           KC_H,           KC_COMMA,       KC_DOT,         KC_SLASH,       KC_NO,
     KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_NO,          KC_SPACE,       CW_TOGG,                                                                                               LGUI(KC_SPACE), KC_ENTER,       KC_NO,          KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT,
