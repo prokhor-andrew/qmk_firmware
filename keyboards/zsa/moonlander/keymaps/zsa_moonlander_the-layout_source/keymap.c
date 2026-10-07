@@ -7,7 +7,15 @@
 
 enum custom_keycodes {
   RGB_SLD = ZSA_SAFE_RANGE,
+  LOCK_SCR,
+  SHOT_AREA,
+  SHOT_FULL,
 };
+
+static bool host_is_apple(void) {
+  os_variant_t os = detected_host_os();
+  return os == OS_MACOS || os == OS_IOS;
+}
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   [0] = LAYOUT_moonlander(
@@ -24,12 +32,12 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     KC_NO,          KC_0,           KC_1,           KC_2,           KC_3,           KC_4,           KC_NO,                                          KC_NO,          KC_EQUAL,       KC_LCBR,        KC_RCBR,        KC_BSLS,        KC_DLR,         KC_NO,
     KC_NO,          KC_5,           KC_6,           KC_7,           KC_8,           KC_9,           KC_NO,                                                                          KC_NO,          KC_MINUS,       KC_LPRN,        KC_RPRN,        KC_CIRC,        KC_PERC,        KC_NO,
     KC_NO,          KC_HASH,        KC_AMPR,        KC_PLUS,        KC_ASTR,        KC_EXLM,                                        KC_UNDS,        KC_LBRC,        KC_RBRC,        KC_PIPE,        KC_AT,          KC_NO,
-    KC_NO,          KC_NO,          KC_NO,          KC_GRAVE,       S(KC_GRAVE),    KC_NO,                                                                                                         KC_NO,          KC_QUOTE,       S(KC_QUOTE),    KC_NO,          KC_NO,          KC_NO,
+    KC_NO,          KC_NO,          KC_NO,          KC_GRAVE,       S(KC_GRAVE),    SHOT_FULL,                                                                                                       SHOT_AREA,      KC_QUOTE,       S(KC_QUOTE),    KC_NO,          KC_NO,          KC_NO,
     KC_NO,          KC_NO,          KC_NO,                          KC_NO,          KC_NO,          KC_NO
   ),
 
   [2] = LAYOUT_moonlander(
-    KC_NO,          KC_NO,          KC_NO,          KC_NO,          KC_BRIU,        KC_BRID,        KC_NO,                                          KC_MUTE,        KC_VOLD,        KC_VOLU,        KC_NO,          KC_NO,          KC_NO,          LGUI(LCTL(KC_Q)),
+    KC_NO,          KC_NO,          KC_NO,          KC_NO,          KC_BRIU,        KC_BRID,        KC_NO,                                          KC_MUTE,        KC_VOLD,        KC_VOLU,        KC_NO,          KC_NO,          KC_NO,          LOCK_SCR,
     KC_NO,          KC_NO,          KC_NO,          KC_NO,          KC_NO,          KC_NO,          KC_NO,                                        KC_NO,          KC_NO,          KC_NO,          KC_NO,          KC_NO,          KC_NO,          KC_NO,
     KC_NO,          KC_NO,          KC_NO,          KC_NO,          KC_NO,          KC_NO,          KC_NO,                                                                        KC_NO,          KC_LEFT,        KC_DOWN,        KC_UP,          KC_RGHT,        KC_NO,          KC_NO,
     KC_NO,          KC_NO,          KC_NO,          KC_NO,          KC_NO,          KC_NO,                                          KC_NO,          KC_NO,          KC_NO,          KC_NO,          KC_NO,          KC_NO,
@@ -46,6 +54,24 @@ void matrix_init_user(void) {
 
 bool process_record_user(uint16_t keycode, keyrecord_t *record) {
   switch (keycode) {
+    case LOCK_SCR:
+      if (record->event.pressed) {
+        tap_code16(host_is_apple() ? LCTL(LGUI(KC_Q)) : LGUI(KC_L));
+      }
+      return false;
+
+    case SHOT_AREA:
+      if (record->event.pressed) {
+        tap_code16(host_is_apple() ? LGUI(LSFT(KC_4)) : KC_PSCR);
+      }
+      return false;
+
+    case SHOT_FULL:
+      if (record->event.pressed) {
+        tap_code16(host_is_apple() ? LGUI(LSFT(KC_3)) : KC_PSCR);
+      }
+      return false;
+
     case KC_1 ... KC_0:
       if (record->event.pressed && (get_mods() & MOD_MASK_SHIFT)) {
         uint8_t saved = get_mods();
