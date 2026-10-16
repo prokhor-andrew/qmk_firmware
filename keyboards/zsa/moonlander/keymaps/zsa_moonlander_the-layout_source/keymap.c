@@ -32,7 +32,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     KC_NO,          KC_0,           KC_1,           KC_2,           KC_3,           KC_4,           KC_NO,                                          KC_NO,          KC_EQUAL,       KC_LCBR,        KC_RCBR,        KC_BSLS,        KC_DLR,         KC_NO,
     KC_NO,          KC_5,           KC_6,           KC_7,           KC_8,           KC_9,           KC_NO,                                                                          KC_NO,          KC_MINUS,       KC_LPRN,        KC_RPRN,        KC_CIRC,        KC_PERC,        KC_NO,
     KC_NO,          KC_HASH,        KC_AMPR,        KC_PLUS,        KC_ASTR,        KC_EXLM,                                        KC_UNDS,        KC_LBRC,        KC_RBRC,        KC_PIPE,        KC_AT,          KC_NO,
-    KC_NO,          KC_NO,          KC_NO,          KC_GRAVE,       S(KC_GRAVE),    SHOT_FULL,                                                                                                       SHOT_AREA,      KC_QUOTE,       S(KC_QUOTE),    KC_NO,          KC_NO,          KC_NO,
+    KC_NO,          KC_NO,          KC_NO,          KC_GRAVE,       S(KC_GRAVE),    KC_NO,                                                                                                           KC_NO,          KC_QUOTE,      S(KC_QUOTE),    KC_NO,          KC_NO,          KC_NO,
     KC_NO,          KC_NO,          KC_NO,                          KC_NO,          KC_NO,          KC_NO
   ),
 
@@ -41,7 +41,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     KC_NO,          KC_NO,          KC_NO,          KC_NO,          KC_NO,          KC_NO,          KC_NO,                                        KC_NO,          KC_NO,          KC_NO,          KC_NO,          KC_NO,          KC_NO,          KC_NO,
     KC_NO,          KC_NO,          KC_NO,          KC_NO,          KC_NO,          KC_NO,          KC_NO,                                                                        KC_NO,          KC_LEFT,        KC_DOWN,        KC_UP,          KC_RGHT,        KC_NO,          KC_NO,
     KC_NO,          KC_NO,          KC_NO,          KC_NO,          KC_NO,          KC_NO,                                          KC_NO,          KC_NO,          KC_NO,          KC_NO,          KC_NO,          KC_NO,
-    KC_NO,          KC_NO,          KC_NO,          KC_NO,          KC_NO,          KC_NO,                                                                                                         KC_NO,          KC_NO,          KC_NO,          KC_NO,          KC_NO,          KC_NO,
+    KC_NO,          KC_NO,          KC_NO,          KC_NO,          KC_NO,          SHOT_FULL,                                                                                                     SHOT_AREA,      KC_NO,          KC_NO,          KC_NO,          KC_NO,          KC_NO,
     KC_NO,          KC_NO,          KC_NO,                          KC_NO,          KC_NO,          KC_NO
   ),
 
